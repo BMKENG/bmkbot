@@ -1,0 +1,1 @@
+int32[8] remaining_waypoint

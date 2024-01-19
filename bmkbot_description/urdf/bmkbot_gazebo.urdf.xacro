@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<robot name="bmkbot_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Link -->
+    <link name="base_footprint" />
+    <link name="base_link">
+        <inertial>
+            <origin xyz="1.0859609660393075e-06 0.03281640460073148 0.3602354734010394" rpy="0 0 0"/>
+            <mass value="313.3428553286604"/>
+            <inertia ixx="24.614171" iyy="23.170412" izz="13.80991" ixy="-1.8e-05" iyz="-0.892765" ixz="0.000111"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/base_link.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/base_link.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="imu_link">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+            <mass value="0.1"/>
+            <inertia ixx="0.0001" iyy="0.0001" izz="0.0001" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+            <geometry>
+            <box size="0.01 0.01 0.01"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+            <geometry>
+            <box size="0.01 0.01 0.01"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="wheel_right_link">
+        <inertial>
+            <origin xyz="0.009999678562384401 3.1058713406695304e-08 4.281336436068317e-08" rpy="0 0 0"/>
+            <mass value="1.0813639555670125"/>
+            <inertia ixx="0.001411" iyy="0.000737" izz="0.000737" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.157776 -0.085 -0.03" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.157776 -0.085 -0.03" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="wheel_left_link">
+        <inertial>
+            <origin xyz="-0.010000319612502334 -2.310552128792498e-08 -2.6415881888147696e-08" rpy="0 0 0"/>
+            <mass value="1.0813550667676108"/>
+            <inertia ixx="0.001411" iyy="0.000737" izz="0.000737" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0.157224 -0.085 -0.03" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0.157224 -0.085 -0.03" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="camera_link">
+        <inertial>
+            <origin xyz="-0.0003136569369861786 -0.010406911020252652 -5.306668889432098e-05" rpy="0 0 0"/>
+            <mass value="0.1791654386141299"/>
+            <inertia ixx="1.1e-05" iyy="7.4e-05" izz="7.4e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0.25 0.0 -0.273" rpy="0 0 -1.57"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.0 0.245 -0.273" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="lidar_link">
+        <inertial>
+            <origin xyz="1.0197104778322666e-14 5.944678261750486e-18 0.024888305029150876" rpy="0 0 0"/>
+            <mass value="1.1259335284680676"/>
+            <inertia ixx="0.000512" iyy="0.000512" izz="0.000519" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.0 -0.0 -0.205" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.0 -0.0 -0.205" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="caster_link">
+        <inertial>
+            <origin xyz="1.1139676958649147e-11 0.023999999859551757 -0.006114229950211221" rpy="0 0 0"/>
+            <mass value="0.0905663362475959"/>
+            <inertia ixx="1.9e-05" iyy="1e-05" izz="2.5e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.0 0.194 -0.0" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/ballcaster_link_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.0 0.194 -0.0" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/ballcaster_link_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Joint -->
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link" />
+        <origin xyz="0.07 0 0.03" rpy="0 0 1.57"/>
+    </joint>
+    
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="imu_link" />
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="right_wheel_joint" type="continuous">
+        <origin xyz="0.157776 0.085 0.03" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="wheel_right_link"/>
+        <axis xyz="1.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="left_wheel_joint" type="continuous">
+        <origin xyz="-0.157224 0.085 0.03" rpy="0 0 3.14"/>
+        <parent link="base_link"/>
+        <child link="wheel_left_link"/>
+        <axis xyz="-1.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="camera_joint" type="fixed">
+        <origin xyz="0.0 -0.245 0.273" rpy="0 0 -1.57"/>
+        <parent link="base_link"/>
+        <child link="camera_link"/>
+    </joint>
+
+    <joint name="lidar_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.205" rpy="0 0 -1.57"/>
+        <parent link="base_link"/>
+        <child link="lidar_link"/>
+    </joint>
+
+    <joint name="caster_joint" type="fixed">
+        <origin xyz="0.0 -0.194 0.0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="caster_link"/>
+    </joint>
+    <xacro:include filename="$(find bmkbot_description)/gazebo/bmkbotbot.gazebo.xacro" />
+
+</robot>

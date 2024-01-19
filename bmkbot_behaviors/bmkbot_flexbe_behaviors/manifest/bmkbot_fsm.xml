@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="bmkbot_fsm">
+
+    <executable package_path="bmkbot_flexbe_behaviors.bmkbot_fsm_sm" class="bmkbot_fsmSM" />
+    <tagstring>bmkbot_fsm</tagstring>
+    <author>ggh-png</author>
+    <date>Tue Dec 05 2023</date>
+    <description>
+        bmkbot_fsm
+
+    </description>
+
+
+    <!-- Contained Behaviors -->
+    <contains name="ericabot_setup" />
+
+    <!-- Available Parameters -->
+
+</behavior>

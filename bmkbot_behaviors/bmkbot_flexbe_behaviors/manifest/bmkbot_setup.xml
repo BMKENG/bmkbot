@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="bmkbot_setup">
+
+    <executable package_path="bmkbot_flexbe_behaviors.bmkbot_setup_sm" class="bmkbot_setupSM" />
+    <tagstring></tagstring>
+    <author>ggh-png</author>
+    <date>Mon Jan 15 2024</date>
+    <description>
+        bmkbot_setup
+
+    </description>
+
+
+    <!-- Contained Behaviors -->
+
+    <!-- Available Parameters -->
+
+</behavior>
