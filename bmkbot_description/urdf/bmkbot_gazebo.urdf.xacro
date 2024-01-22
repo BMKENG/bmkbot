@@ -11,14 +11,14 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/base_link.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/base_link.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/base_link.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/base_link.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -53,14 +53,14 @@
         <visual>
             <origin xyz="-0.157776 -0.085 -0.03" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/wheel_right.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
             <origin xyz="-0.157776 -0.085 -0.03" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/wheel_right.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -74,14 +74,14 @@
         <visual>
             <origin xyz="0.157224 -0.085 -0.03" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/wheel_left.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
             <origin xyz="0.157224 -0.085 -0.03" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/wheel_left.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -95,14 +95,14 @@
         <visual>
             <origin xyz="0.25 0.0 -0.273" rpy="0 0 -1.57"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/camera_link.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
             <origin xyz="-0.0 0.245 -0.273" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/camera_link.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -116,14 +116,14 @@
         <visual>
             <origin xyz="-0.0 -0.0 -0.205" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/lidar_link.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
             <origin xyz="-0.0 -0.0 -0.205" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/lidar_link.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -137,14 +137,14 @@
         <visual>
             <origin xyz="-0.0 0.194 -0.0" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/ballcaster_link_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/ballcaster_link.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="silver"/>
         </visual>
         <collision>
             <origin xyz="-0.0 0.194 -0.0" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbotbot/ballcaster_link_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find bmkbot_description)/meshes/bmkbot/ballcaster_link.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -193,6 +193,6 @@
         <parent link="base_link"/>
         <child link="caster_link"/>
     </joint>
-    <xacro:include filename="$(find bmkbot_description)/gazebo/bmkbotbot.gazebo.xacro" />
+    <xacro:include filename="$(find bmkbot_description)/gazebo/bmkbot.gazebo.xacro" />
 
 </robot>
