@@ -47,7 +47,7 @@ def generate_launch_description():
             [
                 FindPackageShare('bmkbot_nav2'),
                 'map',
-                'map2.yaml'
+                'map.yaml'
             ]
         )
     )

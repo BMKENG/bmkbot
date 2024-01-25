@@ -21,7 +21,7 @@ class ROSNode(QThread):
         self.remaining_waypoint = None
 
     def run(self):
-        self.node = rclpy.create_node('bmkbot_gui_behavior_node')
+        self.node = rclpy.create_node('bmkbot_gui_node')
         
         self.sub_cmd_vel = self.node.create_subscription(Twist, 'set_vel', self.cmd_vel_callback, 10)
         self.set_vel = None

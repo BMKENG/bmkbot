@@ -57,7 +57,7 @@ class RPMOdom(Node):
                 data1 = split_data[0][1:]
                 data2 = split_data[1][:-1]
 
-                # print(data1, data2)
+                print(data1, data2)
                 # rp.loginfo("data1: %s, data2: %s", data1, data2)
                 # 문자열을 부동 소수점으로 변환
                 left_rpm = float(data2) / 6000.0 

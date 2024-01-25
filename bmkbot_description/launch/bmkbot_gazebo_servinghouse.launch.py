@@ -18,14 +18,14 @@ def generate_launch_description():
         [
             FindPackageShare('bmkbot_description'),
             'urdf',
-            'erica_servingbot_gazebo.urdf.xacro'
+            'bmkbot_gazebo.urdf.xacro'
         ]
     )
     urdf_file_path = PathJoinSubstitution(
         [
             FindPackageShare('bmkbot_description'),
             'urdf',
-            'erica_servingbot_gazebo.urdf.xacro'
+            'bmkbot_gazebo.urdf.xacro'
         ]
     )
     rviz_config_file = PathJoinSubstitution(
@@ -40,7 +40,7 @@ def generate_launch_description():
         [
             FindPackageShare('bmkbot_description'),
             'world',
-            'babi.world'
+            'maze.world'
         ]
     )
     

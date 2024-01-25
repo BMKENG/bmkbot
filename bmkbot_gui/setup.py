@@ -24,9 +24,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            # erica servingbot
-            'erica_servingbot_gui = bmkbot_gui.erica_servingbot_gui:main',
-            'erica_servingbot_client_gui = bmkbot_gui.erica_servingbot_client_gui:main',
+            # 'bmkbot_gui = bmkbot_gui.bmkbot_gui:main',
+            'bmkbot_gui = bmkbot_gui.bmkbot_gui:main',
+            'bmkbot_client_gui = bmkbot_gui.bmkbot_client_gui:main',
         ],
     },
 )
