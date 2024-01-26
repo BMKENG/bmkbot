@@ -19,7 +19,7 @@ def generate_launch_description():
         [
             FindPackageShare('bmkbot_description'),
             'urdf',
-            'bmkbot_gazebo.urdf.xacro'
+            'bmkbot.urdf.xacro'
         ]
     )
 
