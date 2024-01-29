@@ -37,6 +37,7 @@ def generate_launch_description():
     g2lidar_prefix = get_package_share_directory("ydlidar_ros2_driver")
     start_g2lidar_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(g2lidar_prefix, "launch", "ydlidar_launch.py"))
+        
     )
     start_robot_description_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
