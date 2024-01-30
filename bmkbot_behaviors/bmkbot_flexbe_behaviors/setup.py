@@ -21,6 +21,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'example_behavior_sm = bmkbot_flexbe_behaviors.example_behavior_sm',
         ],
     },
 )
